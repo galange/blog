@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<HTML expr:dir='data:blog.languageDirection'>
+<head>
+<meta charset='utf-8'/>
+<meta content='width=device-width, initial-scale=1, maximum-scale=1' name='viewport'/>
+
+<b:if cond='data:blog.pageType == &quot;index&quot;'>
+    <title><data:blog.pageTitle/></title>
+<b:else/>
+    <b:if cond='data:blog.pageType == &quot;error_page&quot;'>
+        <title>404: Page Not Found | <data:blog.title/></title>
+    <b:else/>
+        <title><data:blog.pageName/></title>
+    </b:if>
+</b:if>
+
+<meta content='text/html; charset=UTF-8' http-equiv='Content-Type'/>
+<meta content='blogger' name='generator'/>
+<link expr:href='data:blog.homepageUrl + &quot;favicon.ico&quot;' rel='icon' type='image/x-icon'/>
+<link expr:href='data:blog.url' rel='canonical'/>
+<link expr:href='data:blog.homepageUrl + &quot;feeds/posts/default&quot;' expr:title='data:blog.title + &quot; - Atom&quot;' rel='alternate' type='application/atom+xml'/>
+<link expr:href='data:blog.homepageUrl + &quot;feeds/posts/default?alt=rss&quot;' expr:title='data:blog.title + &quot; - RSS&quot;' rel='alternate' type='application/rss+xml'/>
+<link expr:href='&quot;http://www.blogger.com/feeds/&quot; + data:blog.blogId + &quot;/posts/default&quot;' expr:title='data:blog.title + &quot; - Atom&quot;' rel='alternate' type='application/atom+xml'/>
+<link href='http://www.blogger.com/openid-server.g' rel='openid.server'/>
+<link expr:href='data:blog.homepageUrl' rel='openid.delegate'/>
+
+<b:if cond='data:blog.pageType == &quot;item&quot;'>
+<b:if cond='data:blog.postImageThumbnailUrl'>
+<link expr:href='data:blog.postImageThumbnailUrl' rel='image_src'/>
+</b:if>
+</b:if>
+
+<b:if cond='data:blog.pageType == &quot;item&quot;'>
+<meta expr:content='data:blog.pageName' property='og:title'/>
+<meta expr:content='data:blog.canonicalUrl' property='og:url'/>
+<meta content='article' property='og:type'/>
+<b:if cond='data:blog.metaDescription'>
+<meta expr:content='data:blog.metaDescription' property='og:description'/>
+<b:else/>
+<meta expr:content='&quot;Silahkan baca artikel &quot; + data:blog.pageName + &quot; ini selengkapnya di &quot; + data:blog.title + &quot;&quot;' property='og:description'/>
+</b:if>
+</b:if>
+<meta expr:content='data:blog.title' property='og:site_name'/>
+<b:if cond='data:blog.url == data:blog.homepageUrl'>
+<meta content='website' property='og:type'/>
+<b:if cond='data:blog.metaDescription'>
+<meta expr:content='data:blog.metaDescription' property='og:description'/>
+<b:else/>
+<meta expr:content='&quot;Silahkan kunjungi &quot; + data:blog.pageTitle + &quot;Untuk membaca postingan-postingan menarik.&quot;' property='og:description'/>
+</b:if>
+</b:if>
+<b:if cond='data:blog.postImageUrl'>
+<meta expr:content='data:blog.postImageUrl' property='og:image'/>
+<b:else/>
+<b:if cond='data:blog.postImageThumbnailUrl'>
+<meta expr:content='data:blog.postThumbnailUrl' property='og:image'/>
+<b:else/>
+<meta content='URL Image here' property='og:image'/>
+</b:if>
+</b:if>
+<meta content='kode id fb admin' property='fb:admins'/>
+<meta content='kode id profil admin' property='fb:profile_id'/>
+
+&lt;style type=&quot;text/css&quot;&gt;
+&lt;!-- /*<b:skin><![CDATA[
+CSS Style Layout Here
+*/]]></b:skin>
+<style type='text/css'>
+/* CSS Style Skin Blog Here */
+</style>
+
+<b:if cond='data:blog.pageType != &quot;static_page&quot;'>
+<b:if cond='data:blog.pageType != &quot;item&quot;'>
+<style type='text/css'>
+/* CSS Style Homepage Blog Here */
+</style>
+</b:if></b:if>
+
+</head>
+<body>
+<b:if cond='data:blog.pageType == &quot;error_page&quot;'>
+<style scoped='scoped' type='text/css'>
+/* CSS Style Error Page Here */
+</style>
+<!-- HTML Error Page Here -->
+</b:if>
+<b:if cond='data:blog.pageType != &quot;error_page&quot;'>
+<div class='content-wrapper'>
+<div id='outer-wrapper'>
+
+    <header id='header-wrapper' itemscope='itemscope' itemtype='http://schema.org/WPHeader' role='banner'>
+............
+............
+      <div style='clear:both;'/>
+      </header><!-- end header-wrapper -->
+
+<nav id='cssmenu' itemscope='itemscope' itemtype='http://schema.org/SiteNavigationElement' role='navigation'>
+<ul>
+  <li><a href='/' itemprop='url' title='Home'><span itemprop='name'>Home</span></a></li>
+   <li><a href='#' itemprop='url' title='Daftar Isi'><span itemprop='name'>Daftar Isi</span></a></li>
+   <li class='has-sub'><a href='#' title='About This Blog'><span>About This Blog</span></a>
+      <ul>
+         <li><a href='#' itemprop='url' title='About'><span itemprop='name'>About</span></a></li>
+         <li><a href='#' itemprop='url' title='Contact'><span itemprop='name'>Contact</span></a></li>
+         <li class='last'><a href='#' itemprop='url' title='Privacy'><span itemprop='name'>Privacy</span></a></li>
+      </ul>
+   </li>
+<li><a href='#' itemprop='url' title='Forum'><span itemprop='name'>Forum</span></a></li>
+</ul>
+</nav>
+
+     <div id='main-wrapper' itemprop='mainContentOfPage' itemscope='itemscope' itemtype='http://schema.org/Blog' role='main'>
+        <b:section class='main' id='main' showaddelement='no'>
+          <b:widget id='Blog1' locked='true' title='Blog Posts' type='Blog'>
+...........
+...........
+...........
+
+            <b:includable id='post' var='post'>
+  <article class='post hentry' expr:id='data:post.id' itemprop='blogPost' itemscope='itemscope' itemtype='http://schema.org/BlogPosting'>
+
+    <div class='post-header'>
+    <div class='post-header-line-1'/>
+    </div>
+
+    <div class='post-body entry-content' expr:id='&quot;post-body-&quot; + data:post.id' itemprop='articleBody'>
+
+<h3 class='date-header'>
+<span class='post-author vcard' itemprop='author' itemscope='itemscope' itemtype='http://schema.org/Person'>
+                <b:if cond='data:top.showAuthor'>
+                  <b:if cond='data:post.authorProfileUrl'>
+                    Posted by <span class='fn author'>
+                       <a expr:href='data:post.authorProfileUrl' itemprop='url' rel='author' target='_blank' title='author profile'>
+                        <span itemprop='name'><data:post.author/></span>
+                      </a>
+                    </span>
+                  <b:else/>
+                    <span class='fn author'><span itemprop='name'><data:post.author/></span></span>
+                  </b:if>
+                </b:if>
+              </span>
+    <span class='clock'> on <a class='updated' expr:href='data:post.url' rel='bookmark' title='permanent link'><abbr class='updated' expr:title='data:post.timestampISO8601'> <data:post.timestamp/></abbr></a></span></h3>
+
+<b:if cond='data:blog.pageType == &quot;item&quot;'>
+  <data:post.body/>
+</b:if>
+<b:if cond='data:blog.pageType == &quot;static_page&quot;'>
+  <data:post.body/>
+</b:if>
+      <div style='clear: both;'/> <!-- clear for photos floats -->
+    </div>
+
+  </article>
+</b:includable>
+
+          </b:widget>
+        </b:section>
+      </div>
+
+<aside id='sidebar-right' itemscope='itemscope' itemtype='http://schema.org/WPSideBar' role='complementary'>
+............
+............
+............
+</aside>
+      <!-- spacer for skins that want sidebar and main to be the same height-->
+      <div class='clear'>&#160;</div>
+
+    </div> <!-- end outer-wrapper -->
+  </div><!-- end content-wrapper -->
+
+<footer id='footer-wrapper' itemscope='itemscope' itemtype='http://schema.org/WPFooter' role='contentinfo'>
+<div class='credit'>
+Copyright &#169; 2013. <a class='sitename' expr:href='data:blog.homepageUrl' expr:title='data:blog.title'><data:blog.title/></a> - All Rights Reserved<br/>
+Template Created by <a href='#' target='_blank'>Credit Website</a> - Proudly powered by <a href='http://www.blogger.com' target='_blank' title='Blogger'>Blogger</a>
+</div>
+</footer>
+
+</b:if>
+&lt;!--</body>--&gt;&lt;/body&gt;
+</HTML>
