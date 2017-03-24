@@ -1,0 +1,19 @@
+<div id='fb-root'/>
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : &#39;654338391248605&#39;,
+      xfbml      : true,
+      version    : &#39;v2.8&#39;
+    });
+    FB.AppEvents.logPageView();
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = &quot;//connect.facebook.net/en_US/sdk.js&quot;;
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, &#39;script&#39;, &#39;facebook-jssdk&#39;));
+</script>
