@@ -1,0 +1,14 @@
+<html>
+<head>
+<title>JUDUL BLOG</title>
+</head>
+<body>
+<iframe allowfullscreen="true" frameborder="0" height="380" id="videoarea" margin="0" scrolling="NO" src="" width="640"></iframe>
+<div style='clear: both;'></div>
+<script src='http://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.0.min.js'></script>
+<script>
+$(function(){$("#playlist li").on("click",function(){$("#videoarea").attr({"src":$(this).attr("movieurl"),"autoplay":"autoplay"})})
+$("#videoarea").attr({"src":$("#playlist li").eq(0).attr("movieurl"),})})
+</script>
+</body>
+</html>
