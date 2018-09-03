@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>demo</title>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+  <body>
+<textarea style="width:100%" rows="15" id="bari" placeholder="Type JavaScript code to optimize here"></textarea><br />
+<button onclick="myFunction()">Click me</button>
+<textarea style="width:100%" rows="15" id="baris" placeholder="code optimize here"></textarea><br />
+	
+	<script>
+function myFunction() {
+	var a = document.getElementById("bari").value;
+    var info = ["compiled_code", "warnings", "errors", "statistics"];
+    var postdata = {
+		js_code: a,
+		compilation_level: "SIMPLE_OPTIMIZATIONS",
+		output_format: "json",
+		output_info: info
+		};
+
+    $.ajax({
+        type: "POST",
+        url: "https://closure-compiler.appspot.com/compile",
+        data: postdata,
+        dataType: "json",
+        processdata: !0,
+        traditional: !0,
+        success: function(b) {
+            console.log(b);
+			var jsonPretty = JSON.stringify(b, null, '\t');
+            document.getElementById("baris").innerHTML = (jsonPretty);
+        }
+    });
+};
+</script>
+  </body>
+</html>
